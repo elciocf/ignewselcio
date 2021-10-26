@@ -13,10 +13,12 @@ interface SessionWithActive extends Session{
     activeSubscription?: any
   }
 
+interface SubscribeButtonProps{
+    priceId: string;
+}
 
 
-
-export function SubscribeButton(){
+export function SubscribeButton({priceId}:SubscribeButtonProps){
     const [session] = useSession();
     const router = useRouter()
 
